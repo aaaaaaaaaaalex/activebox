@@ -1,0 +1,130 @@
+@import "reset.scss";
+
+body{
+    // font-family: 'Cardo', serif;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #6C7279;
+    background-color: #fff;
+
+}
+
+
+// Container
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+// Header
+.header{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        padding: 38px 0;
+    
+        border-bottom: 1px solid #515369;
+    }
+}
+
+
+
+// Nav
+.nav{
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &__link{
+        margin-left: 60px;
+    
+        
+        text-decoration: none;
+        color: #fff;
+        opacity: .75;
+
+        &:hover{
+            opacity: 1;
+            transition: opacity .1s linear;
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+// Intro
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 750px;
+    padding-top: 100px;
+
+    text-align: center;
+
+    background: #2A2E48 no-repeat center/cover url("../img/bg-intro.jpg");
+
+    &__inner{
+        width: 100%;
+        max-width: 970px;
+    }
+    &__title{
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 65px;
+        font-weight: 700;
+        line-height: 1.16;
+
+        margin-bottom: 20px;
+    }
+    &__subtitle{
+        font-size: 22px;
+        color: #fff;
+        font-weight: 400;
+        line-height: 1.5;
+
+        margin-bottom: 80px;
+    }
+}
+
+
+// Button
+.btn{
+    display: inline-block;
+    vertical-align: top;
+
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+
+    padding: 15px 50px;
+    border-radius: 10px;
+    font-family: inherit;
+    border: 0;
+
+    &--red{
+        background-color: #E84545;
+    }
+    &:hover{
+        background-color: #be5151;
+        transition: background-color .1s linear;
+    }
+}
