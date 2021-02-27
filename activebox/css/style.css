@@ -165,4 +165,118 @@ body {
   transition: background-color .1s linear;
 }
 
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 100px 0;
+}
+
+.features__item {
+  width: 33.33333%;
+  text-align: center;
+  padding: 0 15px;
+  margin: 30px 0;
+}
+
+.features__icon {
+  margin-bottom: 30px;
+}
+
+.features__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2D3033;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.features__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6C7279;
+  line-height: 1.5;
+}
+
+.works {
+  max-width: 2600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.works__item {
+  width: 25%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.works__item:hover .works__content {
+  opacity: 1;
+  -webkit-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+}
+
+.works__photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.works__photo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.works__content {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  text-align: center;
+  background-color: rgba(213, 65, 65, 0.9);
+}
+
+.works__title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.works__text {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.2;
+}
+
 .webp .intro{ background: #2A2E48 no-repeat center/cover url(../img/bg-intro.webp); }

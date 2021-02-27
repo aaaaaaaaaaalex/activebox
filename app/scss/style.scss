@@ -1,11 +1,13 @@
 @import "reset.scss";
+@import "var.scss";
+
 
 body{
     // font-family: 'Cardo', serif;
 
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    color: #6C7279;
+    font-size: $fs14;
+    color: $gray;
     background-color: #fff;
 
 }
@@ -44,7 +46,7 @@ body{
 // Nav
 .nav{
     display: flex;
-    font-size: 13px;
+    font-size: $fs13;
     font-weight: 700;
     text-transform: uppercase;
 
@@ -53,7 +55,7 @@ body{
     
         
         text-decoration: none;
-        color: #fff;
+        color: $white;
         opacity: .75;
 
         &:hover{
@@ -87,7 +89,7 @@ body{
     &__title{
         font-family: 'Open Sans', sans-serif;
         text-transform: uppercase;
-        color: #fff;
+        color: $white;
         font-size: 65px;
         font-weight: 700;
         line-height: 1.16;
@@ -96,7 +98,7 @@ body{
     }
     &__subtitle{
         font-size: 22px;
-        color: #fff;
+        color: $white;
         font-weight: 400;
         line-height: 1.5;
 
@@ -110,9 +112,9 @@ body{
     display: inline-block;
     vertical-align: top;
 
-    font-size: 13px;
+    font-size: $fs13;
     font-weight: 600;
-    color: #fff;
+    color: $white;
     text-transform: uppercase;
 
     padding: 15px 50px;
@@ -126,5 +128,114 @@ body{
     &:hover{
         background-color: #be5151;
         transition: background-color .1s linear;
+    }
+}
+
+
+
+// Features
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0;
+
+    &__item{
+        width: 33.33333%;
+        text-align: center;
+        padding: 0 15px;
+        margin: 30px 0;
+    }
+    &__icon{
+        margin-bottom: 30px;
+    }
+    &__title{
+        font-size: $fs14;
+        font-weight: 700;
+        color: $black;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+    &__text{
+        font-size: $fs14;
+        font-weight: 400;
+        color: $gray;
+    
+        line-height: 1.5;
+    }
+}
+
+
+
+// Works
+.works{
+    max-width: 2600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__item{
+        width: 25%;
+        height: 350px;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        
+
+        &:hover .works__content{
+            opacity: 1;
+
+            transition: opacity .2s linear;
+        }
+    }
+    &__photo{
+        
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+
+        transform: translate3d(-50%, -50%, 0);
+
+        & img{
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__content{
+        opacity: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        text-align: center;
+
+        background-color: rgba($color: #D54141, $alpha: .9)
+    }
+    &__title{
+        font-size: $fs14;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white;
+        line-height: 1.2;
+        
+        margin-bottom: 10px;
+    }
+    &__text{
+        font-size: $fs14;
+        
+        
+        color: $white;
+        line-height: 1.2;
     }
 }
