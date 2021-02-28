@@ -16,8 +16,9 @@ body{
 // Container
 .container{
     width: 100%;
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 
@@ -238,4 +239,136 @@ body{
         color: $white;
         line-height: 1.2;
     }
+}
+
+
+
+// Team
+.team{
+    margin: 100px 0 60px;
+
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__item{
+        width: 25%;
+        padding: 0 15px;
+        margin-bottom: 40px;
+    }
+    &__photo{
+        display: block;
+        max-width: 100%;
+        height: auto;
+
+        margin-bottom: 25px;
+    }
+    &__name{
+        font-size: 22px;
+        color: $black;
+        line-height: 1.2;
+
+        margin-bottom: 8px;
+    }
+    &__prof{
+        text-transform: uppercase;
+        font-size: $fs13;
+        color: #E84545;
+        line-height: 1.2;
+
+        margin-bottom: 22px;
+    }
+    &__text{
+        font-size: $fs14;
+        color: $gray;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+// Social
+.social{
+    display: flex;
+
+    &__item{
+        width: 40px;
+        height: 40px;  
+        border: 1px solid #E8ECEE;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        background-color: #fff;
+
+        &:hover{
+            background-color: #E8ECEE;
+            transition: background-color .2s linear;
+
+            & .social__icon{
+                fill: #E84545;
+                transition: fill .2s linear;
+            }
+        }
+    }
+    &__icon{
+        fill:#C6CACC;
+        display: block;
+        height: 18px;
+    }
+}
+
+
+
+// Reviews
+.reviews{
+    background-color: #53354A;
+    overflow: hidden;
+
+
+    &__item{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__photo{
+        width: 50%;
+        height: 500px;
+        position: relative;
+    }
+    &__img{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 1;
+
+        transform: translateY(-50%);
+    }
+    &__content{
+        width: 50%;
+        padding-left: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__text{
+        font-family: 'Cardo', serif;
+        font-size: 36px;
+        font-style: italic;
+        line-height: 1.17;
+        color: $white;
+
+        margin-bottom: 30px;
+    }
+    &__author{
+        font-size: $fs13;
+        
+        line-height: 1.5;
+        color: $white;
+
+        text-transform: uppercase;
+    }
+    
 }
