@@ -431,4 +431,8 @@ body {
   text-transform: uppercase;
 }
 
+.download {
+  margin: 100px 0;
+}
+
 .webp .intro{ background: #2A2E48 no-repeat center/cover url(../img/bg-intro.webp); }
