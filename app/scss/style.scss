@@ -3,7 +3,6 @@
 
 
 body{
-    // font-family: 'Cardo', serif;
 
     font-family: 'Raleway', sans-serif;
     font-size: $fs14;
@@ -122,6 +121,7 @@ body{
     border-radius: 10px;
     font-family: inherit;
     border: 0;
+    text-align: center;
 
     &--red{
         background-color: #E84545;
@@ -129,6 +129,9 @@ body{
     &:hover{
         background-color: #be5151;
         transition: background-color .1s linear;
+    }
+    &--long{
+        min-width: 280px;
     }
 }
 
@@ -319,6 +322,23 @@ body{
         display: block;
         height: 18px;
     }
+    &--footer{
+        justify-content: center;
+
+        .social__item{
+            background: transparent;
+            border-width: 2px;
+            border-color: $white;
+            border-radius: 2px;
+
+            &:hover{
+                background-color: $white;
+            }
+        }
+        .social__icon{
+            fill: $white;
+        }
+    }
 }
 
 
@@ -378,4 +398,81 @@ body{
 // Download
 .download{
     margin: 100px 0;
+    text-align: center;
+
+    &__title{
+        font-size: 28px;
+        font-weight: 300;
+        color: $black;
+        margin-bottom: 12px;
+        line-height: 0.75;
+    }
+    &__text{
+        font-size: $fs13;
+        font-weight: 700;
+        color: $black;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        line-height: 1.6;
+    }
+}
+
+
+
+// Footer
+.footer{
+    
+    background-color: #3A3E64;
+
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 70px 0 110px;  
+    }
+    &__block{
+        width: 33.3333%;
+
+        text-align: center;
+        padding: 0 15px;
+    }
+    &__title{
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-size: $fs14;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 15px;
+    }
+    &__addres{
+        opacity: .5;
+        font-style: normal;
+        font-size: $fs14;
+        line-height: 1.6;
+        color: $white;
+    }
+    &__text{
+        opacity: .5;
+        font-size: $fs14;
+        line-height: 1.6;
+        color: $white;
+    }
+}
+
+
+
+// Copyright
+.copyright{
+    background-color: #313454;
+    padding: 30px 0;
+
+    &__text{
+        text-align: center;
+        color: #808080;
+        font-size: $fs14;
+        line-height: 1.6;
+
+        & span{
+            color: $white;
+        }
+    }
 }
