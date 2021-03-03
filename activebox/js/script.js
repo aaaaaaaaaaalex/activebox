@@ -11,3 +11,12 @@ function testWebP(callback) {
         document.querySelector('body').classList.add('no-webp');
     }
 });
+$(function() {
+	
+	let header = $("#header");
+	let intro = $("#intro");
+	let introH = intro.height;
+		
+
+	header.addClass("fixed");
+});
