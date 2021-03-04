@@ -39,6 +39,18 @@ body{
     
         border-bottom: 1px solid #515369;
     }
+    &.fixed{
+        position: fixed;
+        background-color:#2A2E48;
+        z-index: 3;
+        height: auto;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+        
+    }
+    &.fixed .header__inner{
+        padding: 10px 0;
+        border-bottom: 0;
+    }
 }
 
 
@@ -144,6 +156,7 @@ body{
     flex-wrap: wrap;
     margin: 100px 0;
 
+    
     &__item{
         width: 33.33333%;
         text-align: center;

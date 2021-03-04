@@ -1,4 +1,5 @@
-function testWebP(callback) {
+$(function() {
+	function testWebP(callback) {
     var webP = new Image();
     webP.onload = webP.onerror = function () {
         callback(webP.height == 2); };
@@ -11,12 +12,33 @@ function testWebP(callback) {
         document.querySelector('body').classList.add('no-webp');
     }
 });
-$(function() {
 	
+
+	// Fixed Header
 	let header = $("#header");
-	let intro = $("#intro");
-	let introH = intro.height;
+	let introH = $("#intro").innerHeight();
+	let scrollPos = $(window).scrollTop();
+
+	checkScroll(scrollPos);
+
+	$(window).on("scroll resize",function() {
+		introH = $("#intro").innerHeight();
+		scrollPos = $(window).scrollTop();
+		checkScroll(scrollPos, introH);
+		console.log(introH);
+	});
+
+	function checkScroll() {
+		if(scrollPos > introH) {
+			header.addClass("fixed");
+		}else{
+			header.removeClass("fixed");
+		};
+	};
+	
+
+	// Smooth Scroll
 		
 
-	header.addClass("fixed");
+	
 });
