@@ -361,9 +361,18 @@ body{
     overflow: hidden;
 
 
+    &__slider{
+        height: 500px;
+        overflow: hidden;
+
+        &.slick-initialized{
+            height: auto;
+        }
+    }
     &__item{
         display: flex;
         flex-wrap: wrap;
+        overflow: hidden;
     }
     &__photo{
         width: 50%;
@@ -403,6 +412,37 @@ body{
         text-transform: uppercase;
     }
     
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0 0 50px;
+    padding: 0;
+   
+    & li{
+        margin: 0 4px;
+    }
+    & button{
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border-radius: 50%;
+        border: 0;
+        padding: 0;
+        opacity: 0.2;
+        font-size: 0;
+        color: transparent;
+
+       
+    }
+    & .slick-active button{
+        opacity: 1;
+    }
 }
 
 
@@ -561,6 +601,20 @@ body{
     // Nav
     .nav{
         display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+        background-color: #2a2e48;
+
+        &__link{
+            padding: 10px 15px;
+        }
+        &.show{
+            display: flex;
+        }
     }
 
     // Burger
@@ -598,6 +652,10 @@ body{
     }
     .reviews__img{
         right: -15px;
+    }
+    .slick-dots{
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
 @media(max-width: 767px){

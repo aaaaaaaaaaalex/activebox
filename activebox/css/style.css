@@ -412,12 +412,22 @@ body {
   overflow: hidden;
 }
 
+.reviews__slider {
+  height: 500px;
+  overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+  height: auto;
+}
+
 .reviews__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .reviews__photo {
@@ -465,6 +475,42 @@ body {
   line-height: 1.5;
   color: #fff;
   text-transform: uppercase;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0 0 50px;
+  padding: 0;
+}
+
+.slick-dots li {
+  margin: 0 4px;
+}
+
+.slick-dots button {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  opacity: 0.2;
+  font-size: 0;
+  color: transparent;
+}
+
+.slick-dots .slick-active button {
+  opacity: 1;
 }
 
 .download {
@@ -601,6 +647,26 @@ body {
 @media (max-width: 991px) {
   .nav {
     display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    text-align: right;
+    background-color: #2a2e48;
+  }
+
+  .nav__link {
+    padding: 10px 15px;
+  }
+
+  .nav.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .burger {
@@ -638,6 +704,11 @@ body {
 
   .reviews__img {
     right: -15px;
+  }
+
+  .slick-dots {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
