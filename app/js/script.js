@@ -1,5 +1,6 @@
 $(function() {
 	@@include('check_webp_css.js')
+	@@include('modal.js')
 	
 
 	// Fixed Header
@@ -16,7 +17,7 @@ $(function() {
 	});
 
 	function checkScroll() {
-		if(scrollPos > introH) {
+		if(scrollPos > (introH - 60)) {
 			header.addClass("fixed");
 		}else{
 			header.removeClass("fixed");
@@ -36,6 +37,17 @@ $(function() {
 		});
 
 		$("#nav").removeClass("show");
+
+		checkHeader2();
+
+        // Header Background 2
+        function checkHeader2() {
+            if(blockID == "#intro") {
+                header.removeClass("header--black");
+            } else {
+                header.addClass("header--black");
+            }
+        };
 	});
 
 
@@ -44,6 +56,13 @@ $(function() {
 		event.preventDefault();
 
 		$("#nav").toggleClass("show");
+
+		if($("#nav").css("display") == "flex") {
+			header.addClass("header--black");
+		}else{
+			header.removeClass("header--black");
+		}
+		
 	});
 	
 

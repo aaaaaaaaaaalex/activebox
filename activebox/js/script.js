@@ -12,6 +12,26 @@ $(function() {
         document.querySelector('body').classList.add('no-webp');
     }
 });
+	 // Modal
+ $("[data-modal]").on("click", function(event) {
+	event.preventDefault();
+	let modalID = $(this).data("modal");
+	$(modalID).addClass("show");
+	$("body").addClass("no-scroll");
+}); 
+$("[data-close]").on("click", function(event) {
+	event.preventDefault();
+	let modalParent = $(this).parents(".modal");
+	modalParent.removeClass("show");
+	$("body").removeClass("no-scroll");
+}); 
+$(".modal").on("click", function(event) {
+	$(this).removeClass("show");
+	$("body").removeClass("no-scroll");
+});
+$(".modal__dialog").on("click", function(event) {
+	event.stopPropagation()
+});
 	
 
 	// Fixed Header
@@ -28,7 +48,7 @@ $(function() {
 	});
 
 	function checkScroll() {
-		if(scrollPos > introH) {
+		if(scrollPos > (introH - 60)) {
 			header.addClass("fixed");
 		}else{
 			header.removeClass("fixed");
@@ -48,6 +68,17 @@ $(function() {
 		});
 
 		$("#nav").removeClass("show");
+
+		checkHeader2();
+
+        // Header Background 2
+        function checkHeader2() {
+            if(blockID == "#intro") {
+                header.removeClass("header--black");
+            } else {
+                header.addClass("header--black");
+            }
+        };
 	});
 
 
@@ -56,6 +87,13 @@ $(function() {
 		event.preventDefault();
 
 		$("#nav").toggleClass("show");
+
+		if($("#nav").css("display") == "flex") {
+			header.addClass("header--black");
+		}else{
+			header.removeClass("header--black");
+		}
+		
 	});
 	
 

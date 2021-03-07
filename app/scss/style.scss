@@ -1,5 +1,6 @@
-@import "reset.scss";
-@import "var.scss";
+@import "reset";
+@import "var";
+@import "modal";
 
 
 body{
@@ -50,6 +51,13 @@ body{
     &.fixed .header__inner{
         padding: 10px 0;
         border-bottom: 0;
+    }
+    &__logo{
+        cursor: pointer;
+        z-index: 1;
+    }
+    &--black{
+        background-color: #2a2e48;
     }
 }
 
@@ -386,6 +394,8 @@ body{
         z-index: 1;
 
         transform: translateY(-50%);
+
+        
     }
     &__content{
         width: 50%;
@@ -538,6 +548,7 @@ body{
     border: none;
     cursor: pointer;
     padding: 8px 0;
+    z-index: 1;
 
     &__item{
         display: block;
@@ -614,6 +625,7 @@ body{
         }
         &.show{
             display: flex;
+
         }
     }
 
@@ -652,6 +664,7 @@ body{
     }
     .reviews__img{
         right: -15px;
+        margin-top: 15px;
     }
     .slick-dots{
         width: 100%;
