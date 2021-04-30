@@ -15,7 +15,7 @@ let project_folder = require("path").basename(__dirname),
             html: source_folder +"/index.html",
             scss: source_folder +"/scss/style.scss",
             js: source_folder +"/js/script.js",
-            img: source_folder +"/img/**/*.+(png|jpg|gif|ico|svg|webp)",
+            img: source_folder +"/img/**/*.+(png|jpg|gif|ico|svg|webp|webmanifest)",
             fonts: source_folder +"/fonts/**/*.{eot, woff, woff2, ttf, svg, otf}",
         },
         watch:{
