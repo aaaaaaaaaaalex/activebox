@@ -780,7 +780,7 @@ body {
   }
 
   .intro__title {
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .intro__subtitle {
@@ -835,6 +835,22 @@ body {
     margin-bottom: 40px;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    height: auto;
+    padding: 130px 0 30px;
+  }
+
+  .intro__title {
+    font-size: 20px;
+  }
+
+  .intro__subtitle {
+    margin-bottom: 30px;
+    font-size: 17px;
   }
 }
 

@@ -679,7 +679,7 @@ body{
         padding: 130px 0 30px;
 
         &__title{
-            font-size: 30px;
+            font-size: 27px;
         }
         &__subtitle{
             margin-bottom: 30px;
@@ -745,7 +745,24 @@ body{
         padding-right: 0;
     }
 }
+@media (max-width: 480px) {
+    // Intro
+    .intro{
+        height: auto;
+        padding: 130px 0 30px;
+    
+        &__title{
+            font-size: 20px;
+        }
+        &__subtitle{
+            margin-bottom: 30px;
+            font-size: 17px;
+        }
+    }
+
+}
 @media(max-width: 414px){
+
 
     // Reviews
     .reviews__img{
